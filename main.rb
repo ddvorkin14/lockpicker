@@ -1,5 +1,3 @@
-require 'rspec'
-
 def lm(current_position, target_combinations, max_pos)
   movements = []
   target_combinations.each do |target|
@@ -27,6 +25,10 @@ def run_test(cp, tc, m, expected)
   
   puts "Total Movements: #{res}"
   puts "\Test Result: #{expected == res ? "PASSED" : "FAILED"}"
+  if expected !== res
+    puts "Expected: #{expected}"
+    puts "Recieved: #{res}"
+  end
   puts "----------------------------------------\n"
 end
 
